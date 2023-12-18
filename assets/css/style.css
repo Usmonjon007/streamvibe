@@ -259,7 +259,7 @@ html {
     align-items: center;
     flex-direction: column;
     gap: 80px;
-    margin-bottom: 200px;
+    margin-bottom: 150px;
 }
 
 .explore .container {
@@ -466,6 +466,118 @@ html {
 
 /* explore section end */
 
+
+/* devices section start */
+.devices {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+.devices .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.devices .container .text {
+    width: calc(100% - 300px);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.devices .container .text .title {
+    color: var(--Absolute-White, #FFF);
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.devices .container .text .desc {
+    color: var(--Grey-60, #999);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.devices .container .devices-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.devices .container .devices-list .device {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px;
+    border-radius: 12px;
+    border: 1px solid var(--Black-15, #262626);
+    background: linear-gradient(222deg, rgba(229, 0, 0, 0.50) -208.03%, rgba(229, 0, 0, 0.00) 41.32%), #0F0F0F;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.devices .container .devices-list .device:hover {
+    box-shadow: 0 0 5px 2px #262626;
+    background: var(--primary-color);
+}
+
+.devices .container .devices-list .device .title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+}
+
+.devices .container .devices-list .device .title .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid var(--Black-12, #1F1F1F);
+    background: var(--Black-08, #141414);
+}
+
+.devices .container .devices-list .device .title .logo .logo-container {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.devices .container .devices-list .device .title span {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.devices .container .devices-list .device .desc {
+    color: var(--Grey-60, #999);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.devices .container .devices-list .device:hover .desc {
+    color: #FFF;
+}
+
+/* devices section end */
+
 /* RESPONSIVE 1440px laptop */
 
 @media screen and (max-width: 1920px) {
@@ -616,6 +728,71 @@ html {
 
     .explore .container .bottom .explore-item .explore-item__footer svg {
         width: 24px;
+    }
+
+    /* devices */
+    .device .container {
+        gap: 60px;
+    }
+
+    .devices .container .text {
+        gap: 10px;
+        width: calc(100% - 150px);
+    }
+
+    .devices .container .text .title {
+        color: var(--Absolute-White, #FFF);
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 150%;
+        /* 42px */
+    }
+
+    .devices .container .text .desc {
+        color: var(--Grey-60, #999);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    .devices .container .devices-list {
+        gap: 20px;
+    }
+
+    .devices .container .devices-list .device {
+        padding: 40px;
+        gap: 24px;
+    }
+
+    .devices .container .devices-list .device .title {
+        gap: 12px;
+    }
+
+    .devices .container .devices-list .device .title .logo {
+        padding: 12px;
+    }
+
+    .devices .container .devices-list .device .title .logo .logo-container {
+        width: 30px;
+        height: 30px;
+    }
+
+    .devices .container .devices-list .device .title .logo .logo-container img {
+        transform: scale(.8);
+    }
+
+    .devices .container .devices-list .device .title span {
+        color: #FFF;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 150%;
+    }
+
+    .devices .container .devices-list .device .desc {
+        color: var(--Grey-60, #999);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
     }
 }
 
